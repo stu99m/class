@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eslee's Classroom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background: #5CB6BD;
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .link {
+            margin: 10px 0;
+            padding: 10px;
+            background: #D3EAEB;
+            text-align: center;
+            border-radius: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #00506b;
+            font-weight: bold;
+        }
+        iframe {
+            margin-top: 20px;
+            border: none;
+        }
+        .playlist {
+            display: none;
+            margin-top: 20px;
+        }
+        .button {
+            margin: 5px;
+            padding: 10px;
+            background: #00506b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function showPlaylist(id) {
+            document.querySelectorAll('.playlist').forEach(playlist => {
+                playlist.style.display = 'none';
+            });
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Eslee's Classroom</h1>
+    </header>
+    <div class="content">
+        <h2>수업 자료</h2>
+        <div class="link">
+            <a href="https://eslee61.notion.site/0ff122a2745e80e98873ebb822378b55?pvs=4" target="_blank">색채학 수업 자료 열기</a>
+        </div>
+        <!-- <div class="link">
+            <a href="https://your-notion-link-here.com" target="_blank">캐드 수업 자료 열기</a>
+        </div> -->
+        <!-- <div class="link">
+            <a href="https://your-notion-link-here.com" target="_blank">기초디자인 수업 자료 열기</a>
+        </div> -->
+        <!-- <div class="link">
+            <a href="https://your-notion-link-here.com" target="_blank">환경디자인 수업 자료 열기</a>
+        </div> -->
+        <!-- <div class="link">
+            <a href="https://your-notion-link-here.com" target="_blank">가상현실 수업 자료 열기</a>
+        </div> -->
+
+        <h2>배경 음악</h2>
+        <button class="button" onclick="showPlaylist('playlist1')">Mood Booster</button>
+        <button class="button" onclick="showPlaylist('playlist2')">Happy Jazz!</button>
+        <button class="button" onclick="showPlaylist('playlist3')">K-pop Walk</button>
+
+        <iframe id="playlist1" class="playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3rxVfibe1L0?utm_source=generator" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe id="playlist2" class="playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5YTAi6JhwZm?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe id="playlist3" class="playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWY9pVDnNPGPE?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+</body>
+</html>
